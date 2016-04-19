@@ -238,6 +238,10 @@
 	  },
 
 	  generateCard: function (card, key) {
+	    // dumb images preload
+	    var image = new Image();
+	    image.src = 'images/' + card.pairId + '.jpg';
+
 	    return React.createElement(Card, { key: key, id: key, pairId: card.pairId, onFlip: this.cardFlipHandler, isFlipped: card.isFlipped });
 	  },
 
